@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+	Name: Ryan Trotter
+	Date Created: 6/9/2019
+	Most Recent Revision: 6/19/2019
+ -->
+ <html lang="en">
+	<head>
+		
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<title>Contact</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="contact.js"></script>
+		
+		
+		<noscript>JavaScript is disabled, this site is best viewed with JavaScript enabled. </noscript>
+		<style>
+			.req{
+				font-weight:bold;
+			}
+			
+			.center_div{
+				margin: 0 auto;
+				width:80%
+			}
+			
+			
+			.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover
+			{
+				color: #fff;
+				background-color: red;
+			}
+			
+			.nav-pills>li>a:hover 
+			{
+				color: #fff;
+				background-color: green;
+				font-weight: bold;
+			}
+			
+			.nav-pills>li>a:visited 
+			{
+				color: #AEC;
+			}
+			
+			.nav-pills{
+				border-top:thin #5b7d87 solid;
+				border-bottom: thin #5b7d87 solid;
+
+			}
+		</style>
+		
+	</head>
+	
+	
+	<body>
+	<div class="container-fluid center_div">
+		<header>
+			<h6 class="titlename">Contact Us</h6>
+			<h1 class="pagetitle">All-Foods Restaurant</h1>
+		</header>
+		
+		<!--
+		<nav>
+			<a class="button badge-pill" href="Home.html"><i class="glyphicon glyphicon-home"></i></a>
+			<a class="button badge-pill" href="Menu.html">Menu</a> 
+			<a class="button badge-pill" href="Contact.html">Contact Us</a>
+		</nav>
+		-->
+		<ul class ="nav nav-pills">
+			<li><a class="button badge-pill" href="Home.html"><i class="glyphicon glyphicon-home"></i></a></li>
+			<li><a class="button badge-pill" href="Menu.html">Menu</a> </li>
+			<li class ="active"><a class="button badge-pill" href="Contact.html">Contact Us</a></li>
+		</ul>
+			
+			<form action="submit.html" method="POST" name="myForm" onsubmit="return validateForm()">
+			
+				<div class ="form-group">
+					<br/>
+					<label for="name" class="req">Name:</label>
+					<input type="text" id="name" name="Name" >
+				</div>
+				
+				<div class="form-group">
+					<label for="email" class="req">Email:</label>
+					<input type="text" id="email" name="Email" >
+				</div>
+				
+				<div class="form-group">
+					<label for="phone" class="req">Phone:</label>
+					<input type="text" id="phone" name="Phone" >
+				</div>
+				
+				<div class ="form-group">
+				Reason for Inquiry:
+					<select name="Inquiry">
+						<option value="Catering" selected>Catering</option>
+						<option value="Private" >Private Party</option>
+						<option value="Feedback" >Feedback</option>
+						<option value="other" >Other</option>
+					</select>
+				</div>
+				
+				<div class="form-group">
+					<label for="AdditionalInfo">Additional Information:</label>
+					<textarea class="form-control" id="AdditionalInfo" rows="4"></textarea>
+				</div>
+				
+				<div class="form-group">
+					<b>Have you been to the restaurant? </b>
+					<input id="r1" type = "radio" name="answer" value="No"/>No
+					<input id="r2" type = "radio" name="answer" value="Yes"/>Yes
+				</div>
+				
+				<div class="form-group">
+					<b>Best days to contact you: </b>&nbsp;&nbsp;&nbsp;&nbsp;
+					<input id="checkMon" type="checkbox" name="choices" value="Monday"/>M&nbsp;&nbsp;&nbsp;&nbsp;
+					<input id="checkTue" type="checkbox" name="choices" value="Tuesday"/>T&nbsp;&nbsp;&nbsp;&nbsp;
+					<input id="checkWed" type="checkbox" name="choices" value="Wednesday"/>W&nbsp;&nbsp;&nbsp;&nbsp;
+					<input id="checkThu" type="checkbox" name="choices" value="Thursday"/>Th&nbsp;&nbsp;&nbsp;&nbsp;
+					<input id="checkFri" type="checkbox" name="choices" value="Friday"/>F
+				</div>
+				
+				<div class="form-group">
+					<input type="submit" value="Send Request"/><br/>
+				
+				</div>
+			</form>
+		</div>
+		
+		
+		<div class="container-fluid" >
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					
+					<ol class="carousel-indicators">
+					  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					  <li data-target="#myCarousel" data-slide-to="1"></li>
+					  <li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+					
+					<div class="carousel-inner" role="listbox">
+					   <div class="item active">
+							<img src="pictures/street.jpg" alt="restaurant exterior" width="200" height="200">
+							<div class="carousel-caption">
+								<h3 style="color:purple">We're opening a new location.</h3>
+							</div>
+					  </div>
+
+					  <div class="item">
+						<img src="pictures/menu.jpg" alt="restaurant menu" width="200" height="200">
+						<div class="carousel-caption">
+						  <h3 style="color:yellow">We're rolling out our seasonal menu, with special options for this season.</h3>
+						</div>
+					  </div>
+					
+					  <div class="item">
+						<img src="pictures/lemon.jpg" alt="drink" width="200" height="200">
+						<div class="carousel-caption">
+							<h3 style="color:red"> The Drink of the Month is SG Special Brew.</h3>
+						</div>
+					  </div>
+
+					</div>
+				
+				
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		
+		
+		<footer>
+				<p>Food Drive, Eat City, Texas, 77777</p>
+				<p>806-123-4567</p>
+		</footer>
+		
+		<hr/>
+	</body>
+ </html>
